@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpeechRecognition</title>
+</head>
+<body>
+    <h1>SpeechRecognition</h1>
+    <form action="/transcribe" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="ファイルをアップロードして文字起こし">
+    </form>
+    <br>
+    {% if transcription %}
+        <h2>文字起こし結果:</h2>
+        <p>{{ transcription }}</p>
+    {% endif %}
+</body>
+</html>
